@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
-// import AuthRoute from "./Routes/AuthRoute.js";
+import AuthRoute from "./Routes/AuthRoute.js";
 // import PostRoute from "./Routes/PostRoute.js";
 // import UserRoute from "./Routes/UserRoute.js";
 
@@ -29,6 +29,6 @@ mongoose
   .catch((error) => console.log(error));
 
 // usage of routes
-// app.use("/auth", AuthRoute);
+app.use("/auth", AuthRoute);
 // app.use("/user", UserRoute);
 // app.use("/post", PostRoute);
