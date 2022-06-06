@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import AuthRoute from "./Routes/AuthRoute.js";
-// import PostRoute from "./Routes/PostRoute.js";
+import PostRoute from "./Routes/PostRoute.js";
 import UserRoute from "./Routes/UserRoute.js";
 
 // Routes
@@ -30,5 +30,5 @@ mongoose
 
 // usage of routes
 app.use("/auth", AuthRoute);
- app.use("/user", UserRoute);
-// app.use("/post", PostRoute);
+app.use("/user", UserRoute);
+app.use("/post", PostRoute);
